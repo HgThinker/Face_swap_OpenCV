@@ -24,6 +24,9 @@ python src/FACE_SWAP/Face_swap_picture.py --source_image_name=<SOURCE_IMAGE_NAME
 - des_image_name: the name of picture you stick the face into(E.g. Donald.jpg)
 
 ### Face swapping real-time
+
+![Alt Text](Face_Swap_live_demo.gif)
+
 - To use this function, you need at least 1 picture which contains only 1 face.
 - A webcam(of course)
 - Run the command below:
