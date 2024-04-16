@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: face-swap
+Version: 0.1.0
+Summary: Swaping face in realtime and image
+Requires-Python: >=3.9
+Requires-Dist: numpy
+Requires-Dist: cmake
+Requires-Dist: essentials
+Requires-Dist: imutils
+Requires-Dist: setuptools
+Requires-Dist: opencv-python
+Requires-Dist: argparse
+
+readme

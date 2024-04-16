@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/face_swap.egg-info/PKG-INFO
+src/face_swap.egg-info/SOURCES.txt
+src/face_swap.egg-info/dependency_links.txt
+src/face_swap.egg-info/requires.txt
+src/face_swap.egg-info/top_level.txt
