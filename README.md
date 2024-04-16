@@ -1,6 +1,7 @@
 # Face swap OpenCV 
 
 This small project aim to implement a swapping faces method, in which we use module dlib landmark detection .
+![Alt text](Face_Swap_demo.png?raw=true "Title")
 
 ## Installation
 
