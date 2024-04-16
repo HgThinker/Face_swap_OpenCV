@@ -1,17 +1,27 @@
 import cv2
 import numpy as np
 import dlib
+import argparse
+import os
+
+parser  = argparse.ArgumentParser()
+parser.add_argument('--source_image_name',type=str,required=True)
+parser.add_argument('--des_image_name',type=str, required=True)
+arg = parser.parse_args()
+
+source_image_name = arg.source_image_name
+des_image_name = arg.des_image_name
+
+project_path = os.getcwd()
 
 webcam_video_stream = cv2.VideoCapture(0)
 frame_width = int(webcam_video_stream.get(3))
 frame_height = int(webcam_video_stream.get(4))
    
 size = (frame_width, frame_height)
-result = cv2.VideoWriter('Trump.avi', 
-                         cv2.VideoWriter_fourcc(*'MJPG'),
-                         10, size)
 
-SOURCE_PATH = "Donald_Trump.png"
+SOURCE_PATH = os.path.join(project_path,'image',source_image_name)
+DES_PATH = os.path.join(project_path,'image',des_image_name)
 
 frontal_face_detector = dlib.get_frontal_face_detector()
 frontal_face_predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
@@ -28,7 +38,7 @@ def index_from_array(numpyarray):
 source_image = cv2.imread(SOURCE_PATH)
 source_image_grayscale = cv2.cvtColor(source_image, cv2.COLOR_BGR2GRAY)
 source_image = cv2.cvtColor(source_image,cv2.COLOR_BGR2RGB)
-des_image = cv2.imread("MT.jpg")
+des_image = cv2.imread(DES_PATH)
 des_image = cv2.cvtColor(des_image,cv2.COLOR_BGR2RGB)
 
 current_frame = des_image
@@ -175,7 +185,7 @@ if len(destination_faces) == 1:
     seamless_cloned_face = cv2.seamlessClone(destination_with_face, destination_image, final_destination_face_mask, destination_face_center_point, cv2.NORMAL_CLONE)
     seamless_cloned_face = cv2.cvtColor(seamless_cloned_face,cv2.COLOR_RGB2BGR)
     # cv2.imshow("final frame", seamless_cloned_face)
-    cv2.imwrite("Trump_seamlessclone.png",seamless_cloned_face)
+    cv2.imwrite(f"output/output_{des_image_name}",seamless_cloned_face)
 else:
     cv2.imshow("final frame", destination_image)
 
