@@ -1,7 +1,6 @@
 # Face swap OpenCV 
 
 This small project aim to implement a swapping faces method, in which we use module dlib landmark detection .
-![Alt text](Face_Swap_demo.png?raw=true "Title")
 
 ## Installation
 
@@ -11,6 +10,9 @@ bash scripts/setup_everything.sh
 
 ## Usage
 ### Face swapping picture to picture
+
+![Alt text](Face_Swap_demo.png?raw=true "Title")
+
 - To use this function, you need at least 2 pictures, each contains only 1 face.
 - Put your pictures into the 'image' folder to use them.
 - Run the command below:
