@@ -3,7 +3,7 @@
 This small project aim to implement a swapping faces method, in which we use module dlib landmark detection .
 
 ## Installation
-
+**Setting up everthing:**
 ```bash
 bash scripts/setup_everything.sh
 ```
