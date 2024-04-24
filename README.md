@@ -7,6 +7,7 @@ This small project aim to implement a swapping faces method, in which we use mod
 ```bash
 bash scripts/setup_everything.sh
 ```
+**You can download the shape-predictor-68-face-landmarks.dat** [here](https://www.kaggle.com/datasets/sergiovirahonda/shape-predictor-68-face-landmarksdat/code)
 
 ## Usage
 ### Face swapping picture to picture
